@@ -9,15 +9,15 @@ O programa deve ler as informações do jogador nessa ordem:
 - idade: inteiro
 - posição: strig
 
-### Saída
+## Saída
 
 O programa deve imprimir as informações do jogador criado, uma por linha, com a mensagem "Jogador criado!" no início. As informações devem ser exibidas na seguinte ordem: nome, nacionalidade, idade e posição (com a mensagem "Posição:" na frente). Veja a estrutura abaixo:
 
 - Jogador criado!
-    [nome]
-    [nacionalidade]
-    [idade]
-    Posição: [posição]
+- [nome]
+- [nacionalidade]
+- [idade]
+- Posição: [posição]
 
 ### Exemplos
 A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
