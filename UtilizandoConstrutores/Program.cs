@@ -2,26 +2,24 @@
 
 class Personagem
 {
-    public string Nome { get; set; }
-    public string Raca { get; set; }
-    public string Classe { get; set; }
-    public int Nivel { get; set; } = 1;
-    public int Vida { get; set; } = 10;
+    private string nome;
+    private string raca;
+    private string classe;
+    private int nivel;
+    private int vida;
 
     public Personagem(string nome, string raca, string classe)
     {
-        Nome = nome;
-        Raca = raca;
-        Classe = classe;
+        this.nome = nome;
+        this.raca = raca;
+        this.classe = classe;
+        this.nivel = 1;
+        this.vida = 10;
     }
-
+    
     public void ExibirStatus()
     {
-        Console.WriteLine("Nome:" + Nome);
-        Console.WriteLine("Raça:" + Raca);
-        Console.WriteLine("Classe:" + Classe);
-        Console.WriteLine("Nível:" + Nivel);
-        Console.WriteLine("Vida:" + Vida);
+        Console.WriteLine($"Status: \nNome:{nome} \nRaça:{raca} \nClasse:{classe} \nNível:{nivel} \nVida:{vida}");
     }
 }
 
@@ -29,6 +27,12 @@ class Program
 {
     static void Main()
     {
-        
+        string entradaNome = Console.ReadLine();
+        string entradaRaca = Console.ReadLine();
+        string entradaClasse = Console.ReadLine();
+
+        Personagem personagem = new Personagem(entradaNome, entradaRaca, entradaClasse);
+
+        personagem.ExibirStatus();
     }
 }
