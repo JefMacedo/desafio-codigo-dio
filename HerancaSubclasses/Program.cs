@@ -2,28 +2,34 @@
 
 class Personagem
 {
-    public string Nome { get; set; }
-    public int Mana { get; set; }
+    protected string nome;
+    protected int mana;
 
     public Personagem(string nome, int mana)
     {
-        Nome = nome;
-        Mana = mana;
+        this.nome = nome;
+        this.mana = mana;
     }
 }
 
 class Subclasse : Personagem
 {
-    public int DanoBase { get; set; }
+    private int danoBase;
 
     public Subclasse(string nome, int mana, int danoBase) : base(nome, mana)
     {
-        DanoBase = danoBase;
+        this.danoBase = danoBase;
     }
 
-    public void CalcularDano()
+    public int CalcularDano(int quantidadeMana)
     {
-        Console.WriteLine(Nome + " atacou e causou " + DanoBase * Mana + " de dano!");
+        return danoBase * quantidadeMana;
+    }
+
+    public void Atacar(int quantidadeMana)
+    {
+        int danoCausado = CalcularDano(quantidadeMana);
+        Console.WriteLine($"{nome} atacou e causou {danoCausado} de dano!");
     }
 }
 
@@ -31,6 +37,10 @@ class Program
 {
     static void Main()
     {
-       
+        string nome = Console.ReadLine();
+        int mana = int.Parse(Console.ReadLine());
+        int danoBase = int.Parse(Console.ReadLine());
+        Subclasse sc = new Subclasse(nome, mana, danoBase);
+        sc.Atacar(mana);
     }
 }
