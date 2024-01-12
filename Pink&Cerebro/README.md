@@ -14,7 +14,8 @@ A segunda linha contém N inteiros Li (1 ≤ Li ≤ 100), representando os núme
 Imprima a quantidade de números múltiplos de 2, 3, 4 e 5 presentes na lista. Observe a formatação da saída nos exemplos, pois ela deve ser seguida rigorosamente.
 
 | Exemplo de Entrada    | Exemplo de Saída  |
-| 5 \n 2 5 4 20 10  | 4 Multiplo(s) de 2
-0 Multiplo(s) de 3
-2 Multiplo(s) de 4
-3 Multiplo(s) de 5 |
+|-----------------------|-------------------|
+| 5            | 4 Multiplo(s) de 2  |
+| 2 5 4 20 10  | 0 Multiplo(s) de 3  |
+| | 2 Multiplo(s) de 4 |
+| | 3 Multiplo(s) de 5 |
